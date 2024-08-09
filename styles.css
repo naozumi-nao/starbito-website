@@ -1,5 +1,6 @@
 * {
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -8,8 +9,8 @@ body {
 }
 
 section {
-  margin: 16px;
-  padding: 8px;
+  margin: 36px;
+  padding: 24px;
   text-align: justify;
 }
 
@@ -34,24 +35,26 @@ h4 {
   font-style: normal;
 }
 
+/*-----------------------------------------------*/
+
 header {
   display: inline;
 }
 
-#jumbotron {
+.jumbotron {
   height: 500px;
   width: 100%;
   padding: 10px;
   background-image:url("jumbotron.jpg")
 }
 
-#jumbotron h1 {
+.jumbotron h1 {
   color: aliceblue;
   margin-top: 200px;
   margin-bottom: 0px;
 }
 
-#jumbotron h4 {
+.jumbotron h4 {
   color: aliceblue;
   margin-top: 8px;
 }
@@ -60,6 +63,7 @@ nav {
   background-color:aliceblue;
   position: sticky;
   padding: 5px;
+  width: 100%;
   top: 0;
 }
 
@@ -100,6 +104,19 @@ li {
   padding-right: 0px;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+/*==============================================================*/
+#layanan img {
+  height: 200px;
+}
+
 #visi-misi {
   text-align: center;
 }
@@ -108,11 +125,16 @@ li {
   text-align: center;
 }
 
-.row {
-  display: flex;
+#layanan .column img {
+  flex: 20%;
 }
 
-.column {
+#layanan .column p { /*????????????????????*/
+  flex: 50%;
+  width: 100%;
+}
+
+#team .column {
   flex: 33%;
 }
 
@@ -121,7 +143,20 @@ li {
   width: 300px;
 }
 
-/*==========*/
+/*=============================CONTACT==========================*/
+
+#contact .column {
+  flex: 50%;
+  text-align: center;
+}
+
+#contact img {
+  width: 200px;
+  height: 200px;
+}
+
+
+/*==============================================================*/
 footer {
   margin-top: 16px;
   background-color:aliceblue;
@@ -129,9 +164,13 @@ footer {
 }
 
 footer ul {
-  display: flex;
-  flex-direction: column;
-  flex: 75%;
+  font-size: 18px;
+  font-weight: 400px;
+  text-decoration: none;
+}
+
+footer li {
+  margin: auto;
 }
 
 footer #copyright {
